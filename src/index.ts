@@ -88,7 +88,7 @@ export function apply(ctx: Context) {
           return `\n [*${data}*] `
         })
 
-        const whiteListView = '当前白名单人员列表' + whiteList.map(data=>{
+        const whiteListView = '当前白名单人员列表：' + whiteList.map(data=>{
           return `\n [*${data}*] `
         })
 
