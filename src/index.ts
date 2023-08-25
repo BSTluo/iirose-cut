@@ -26,13 +26,7 @@ export function apply(ctx: Context) {
   ctx.on('iirose/joinRoom', (session, data) => {
     const index = nowUserList.indexOf(data.username)
     
-    if (index > -1) {
-      session.send({
-        public: {
-          message: '[IIROSE-CUT] 用户已存在白名单'
-        }
-      })
-    }
+    if (index > -1) { return }
     nowUserList.push(data.username)
   })
 
