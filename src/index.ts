@@ -12,26 +12,26 @@ export function apply(ctx: Context) {
   const whiteList = []
   let status = false
 
-  ctx.on('iirose/newMusic', (session, data) => {
+  ctx.on('iirose/newMusic', (session) => {
     if (!status) { return }
 
-    const index = nowUserList.indexOf(data.owner)
-    const index2 = whiteList.indexOf(data.owner)
+    const index = nowUserList.indexOf(session.data.owner)
+    const index2 = whiteList.indexOf(session.data.owner)
     
     if (index > -1 || index2 > -1) { return }
 
     ctx.emit('iirose/cut-one', {})
   })
 
-  ctx.on('iirose/joinRoom', (session, data) => {
-    const index = nowUserList.indexOf(data.username)
+  ctx.on('iirose/joinRoom', (session) => {
+    const index = nowUserList.indexOf(session.data.username)
     
     if (index > -1) { return }
-    nowUserList.push(data.username)
+    nowUserList.push(session.data.username)
   })
 
-  ctx.on('iirose/leaveRoom', (session, data) => {
-    const index = nowUserList.indexOf(data.username)
+  ctx.on('iirose/leaveRoom', (session) => {
+    const index = nowUserList.indexOf(session.data.username)
     if (index < 0) { return }
     nowUserList.splice(index, 1)
   })

@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-iirose-cut",
   "description": "适用于的[IIROSE蔷薇花园](https://iirose.com/)自动切除退出房间的人所点的歌曲",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -17,7 +17,7 @@
   ],
   "peerDependencies": {
     "koishi": "^4.14.1",
-    "koishi-plugin-adapter-iirose": "^0.2.22"
+    "koishi-plugin-adapter-iirose": "~0.2.36"
   },
   "homepage": "https://forum.bstluo.top/"
 }
