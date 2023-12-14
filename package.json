@@ -9,7 +9,6 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
   "keywords": [
     "chatbot",
     "koishi",
@@ -17,7 +16,7 @@
   ],
   "peerDependencies": {
     "koishi": "^4.14.1",
-    "koishi-plugin-adapter-iirose": "~0.2.36"
+    "koishi-plugin-adapter-iirose": "~0.2.41"
   },
   "homepage": "https://forum.bstluo.top/"
 }
