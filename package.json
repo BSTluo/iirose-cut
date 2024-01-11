@@ -16,7 +16,7 @@
   ],
   "peerDependencies": {
     "koishi": "^4.14.1",
-    "koishi-plugin-adapter-iirose": "~0.3.4"
+    "koishi-plugin-adapter-iirose": "~0.3.6"
   },
   "homepage": "https://forum.bstluo.top/"
 }
