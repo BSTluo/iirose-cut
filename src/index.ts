@@ -24,14 +24,14 @@ export function apply(ctx: Context) {
   })
 
   ctx.on('iirose/joinRoom', (session) => {
-    const index = nowUserList.indexOf(session.data.username)
+    const index = nowUserList.indexOf(session.username)
     
     if (index > -1) { return }
-    nowUserList.push(session.data.username)
+    nowUserList.push(session.username)
   })
 
   ctx.on('iirose/leaveRoom', (session) => {
-    const index = nowUserList.indexOf(session.data.username)
+    const index = nowUserList.indexOf(session.username)
     if (index < 0) { return }
     nowUserList.splice(index, 1)
   })
